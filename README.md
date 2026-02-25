@@ -2,30 +2,28 @@
 OverTheWire Natas - Web Security Challenge Writeups (Levels 0-10)
 
 Project Overview: 
-This repository documents my complettion of OverTheWire Natas Levels 0-10, a series of progressivley difficult web application 
-security challenges designed to teach real-world vulnerability discovery and explotiation techniques.
+This repository documents my complettion of OverTheWire Natas Levels 0-10, a series of progressivley difficult web application security challenges designed to teach real-world vulnerability discovery and explotiation techniques.
 
 Each Level includes:
-Vulnerability identification
-Exploitation methodology 
-Outcome
-Screenshot evidence
+- Vulnerability identification
+- Exploitation methodology 
+- Outcome
+- Screenshot evidence
 
-This project demonstrates hands-on experience in web application security testing, ethical hacking, vulnerability analysis, and 
-professional security documentation.
+This project demonstrates hands-on experience in web application security testing, ethical hacking, vulnerability analysis, and professional security documentation.
 
 Skills Demonstrated:
-Web Application Security Testing
-Vulnerability Analysis
-Ethical Hacking Methodology
-SQL Injection
-Authentication Bypass
-Cookie Manipulation
-Directory Traversal
-Source Code Analysis
-Linux Command Line
-Burp Suite
-Technical Documentation
+- Web Application Security Testing
+- Vulnerability Analysis
+- Ethical Hacking Methodology
+- SQL Injection
+- Authentication Bypass
+- Cookie Manipulation
+- Directory Traversal
+- Source Code Analysis
+- Linux Command Line
+- Burp Suite
+- Technical Documentation
 
 Challenge Breakdown:
 Level                Vulnerability Type
@@ -41,18 +39,17 @@ Level                Vulnerability Type
 9-10                 Advanced Command Injection
 
 Ethical Disclaimer!!!
-This repository is for educational purposes only. All activities were conducted in a controlled lab environment provided by OverTheWire. 
-No unauthroized systems were accessed.
+This repository is for educational purposes only. All activities were conducted in a controlled lab environment provided by OverTheWire. No unauthroized systems were accessed.
 
 Writetups:
 Detailed walkthroughs for each level are located in the /levels directory.
 
 Why This Matters:
 This project demonstrates:
-Real-world explotiation techniques
-Systematic problem sovling
-Professional security reporting
-Ethical hacking best practices
+- Real-world explotiation techniques
+- Systematic problem sovling
+- Professional security reporting
+- Ethical hacking best practices
 
 Contact
 Feel free to connect with me on LinkedIn to discuss cybersecurity, digital forensics, and hands-on security research!
