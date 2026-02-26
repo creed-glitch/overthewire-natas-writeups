@@ -10,7 +10,7 @@ Approach
 - Navigated to directory and located credentials
 
 Outcome
-Successfully retireved the password for the next level.
+- Successfully retireved the password for the next level.
 
 Evidence
 Is located in the screenshots/level3.png
