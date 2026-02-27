@@ -18,7 +18,7 @@ Successfully retrieved the password for Level 1 from exposed source code.
 ---
 
 # Evidence
-![Level 0 Screenshot] (../screenshots/level0.png)
+![Level 0 Screenshot](../screenshots/level0.png)
 
 --- 
 
