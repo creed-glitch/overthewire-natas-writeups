@@ -19,7 +19,7 @@ Successfully bypassed authentication and retrieved the password for Level 6.
 ---
 
 # Evidence 
-![Level 5 Screenshot](../screenshots/level5.png)
+![Level 5 Screenshot](../screenshots/level05.md)
 
 ---
 
