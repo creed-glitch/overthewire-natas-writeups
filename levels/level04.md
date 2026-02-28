@@ -1,4 +1,4 @@
-# Natas Level 4 -> 5
+# Natas Level 3 -> 4
 
 # Primary Security Concept
 Referrer-based authentication bypass
