@@ -19,7 +19,7 @@ Successfully bypassed filtering mechanisms and retrieved the password for level 
 ---
 
 # Evidence
-![Level 10 Screenshots](../screenshots/level0.png)
+![Level 10 Screenshots](../screenshots/level0.md)
 
 ---
 
