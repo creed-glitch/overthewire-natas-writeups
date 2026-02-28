@@ -19,7 +19,7 @@ Successfully computed the correct secret and retrieved the password for Level 9.
 ---
 
 # Evidence
-![Level 8 Screenshots](../screenshots/level8.md)
+![Level 8 Screenshots](../screenshots/level08.md)
 
 ---
 
