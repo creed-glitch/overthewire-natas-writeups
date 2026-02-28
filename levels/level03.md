@@ -1,4 +1,4 @@
-# Natas Level 3 -> 4
+# Natas Level 2 -> 3
 
 # Primary Security Concept
 robots.txt enumeration & hidden directory exposure
@@ -14,7 +14,7 @@ robots.txt enumeration & hidden directory exposure
 - Successfully retireved the password for the next level.
 
 # Evidence
-![Level 3 Screenshot](../screenshots/level3.png)
+![Level 3 Screenshots](../screenshots/level3.png)
 
 # Key Learning
 Security through obscurity is ineffective. Attackers routinely enumerate 'robots.txt' and directory paths to locate hidden sensitive resources.
