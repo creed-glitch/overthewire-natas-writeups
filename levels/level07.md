@@ -18,7 +18,7 @@ Successully retrieved the password for Level 8.
 ---
 
 # Evidence
-![Level 7 Screenshot](../screenshots/level7.md)
+![Level 7 Screenshot](../screenshots/level07.md)
 
 ---
 
