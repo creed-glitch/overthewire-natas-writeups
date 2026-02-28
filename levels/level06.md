@@ -20,7 +20,7 @@ Successfully retrieved the password for Level 7.
 ---
 
 # Evidence
-![Level 6 Screenshots](../screenshots/level6.md)
+![Level 6 Screenshots](../screenshots/level06.md)
 
 ---
 
