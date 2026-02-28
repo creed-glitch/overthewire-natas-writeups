@@ -14,7 +14,7 @@ robots.txt enumeration & hidden directory exposure
 - Successfully retireved the password for the next level.
 
 # Evidence
-![Level 3 Screenshots](../screenshots/level3.png)
+![Level 3 Screenshots](../screenshots/level03.md)
 
 # Key Learning
 Security through obscurity is ineffective. Attackers routinely enumerate 'robots.txt' and directory paths to locate hidden sensitive resources.
