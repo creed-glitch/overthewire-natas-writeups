@@ -19,7 +19,7 @@ Successfully retrieved the password for Level 3 from an exposed directory.
 
 --- 
 # Evidence
-![Level 2 Screenshot](../screenshots/level2.png)
+![Level 2 Screenshot](../screenshots/level02.md)
 
 ---
 # Key Learning
