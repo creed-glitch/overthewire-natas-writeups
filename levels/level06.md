@@ -1,4 +1,4 @@
-# Natas Level 6 -> 7 
+# Natas Level 5 -> 6
 
 # Primary Security Concept 
 Sensitive file exporsure through insecure source code references
@@ -20,7 +20,7 @@ Successfully retrieved the password for Level 7.
 ---
 
 # Evidence
-![Level 6 Screenshot](../screenshots/level6.png)
+![Level 6 Screenshots](../screenshots/level6.png)
 
 ---
 
