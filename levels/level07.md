@@ -1,4 +1,4 @@
-# Natas Level 7 -> 8 
+# Natas Level 6 -> 7 
 
 # Primary Security Concept
 Insecure exposure of sensitive file paths through HTML comments
@@ -18,7 +18,7 @@ Successully retrieved the password for Level 8.
 ---
 
 # Evidence
-![Level 7 Screenshot](../screenshots/level7.png)
+![Level 7 Screenshot](../screenshots/level7.md)
 
 ---
 
