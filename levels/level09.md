@@ -1,4 +1,4 @@
-# Natas Level 9 -> 10
+# Natas Level 8 -> 9
 
 # Primary Security Concept
 Command injection vulnerability through unsantitized user input
@@ -18,7 +18,7 @@ Successfully executed injected system commands and retrieved the password for Le
 ---
 
 # Evidence
-![Level 9 Screenshots](../screenshots/level9.png)
+![Level 9 Screenshots](../screenshots/level09.md)
 
 ---
 
