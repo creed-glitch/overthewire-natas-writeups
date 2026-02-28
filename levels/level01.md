@@ -19,7 +19,7 @@ Successfully retrieved the password for Level 2.
 --- 
 
 # Evidence 
-![Level 1 Screenshot](../screenshots/level.png)
+![Level 1 Screenshot](../screenshots/level01.md)
 
 ---
 
