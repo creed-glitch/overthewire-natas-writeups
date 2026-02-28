@@ -1,5 +1,5 @@
 
-# Natas Level 1 -> 2 
+# Natas Level 0 -> 1 
 
 # Primary Security Concept
 Insecure handling of sensitive information in client-side source code
