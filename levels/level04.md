@@ -18,7 +18,7 @@ Successfully bypassed access controls and retrieved the password for Level 5.
 ---
 
 # Evidence
-![Level 4 Screenshot](../screenshots/level4.png)
+![Level 4 Screenshot](../screenshots/level04.md)
 
 ---
 
