@@ -1,4 +1,4 @@
-# Natas Level 8 -> 9
+# Natas Level 7 -> 8
 
 # Primary Security  Concept
 Weak secret obfuscation and reversible encoding
@@ -19,7 +19,7 @@ Successfully computed the correct secret and retrieved the password for Level 9.
 ---
 
 # Evidence
-![Level 8 Screenshots](../screenshots/level8.png)
+![Level 8 Screenshots](../screenshots/level8.md)
 
 ---
 
