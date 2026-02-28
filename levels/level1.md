@@ -24,4 +24,4 @@ Successfully retrieved the password for Level 2.
 ---
 
 # Key Learning
-Public directory listings can expose sensitive files if proper access controls are not enforced. 
+Client-side source code should never contain sensitive data, regardless of access or UI limitations. 
