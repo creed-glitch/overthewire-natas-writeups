@@ -1,4 +1,4 @@
-# Natas Level 2 -> 3
+# Natas Level 1 -> 2
 
 # Primary Security Concept 
 Insecure directory exposure and improper file access controls
@@ -6,7 +6,7 @@ Insecure directory exposure and improper file access controls
 ---
 
 # Approach 
-- Inspected webpage elemetns and indentified a hidden image refernce
+- Inspected webpage elements and indentified a hidden image reference 'files/pixel.png'
 - Opened the image in a new browser tab
 - Observed a visible directory path in the URL
 - Removed the image filename to access the full directory listing
