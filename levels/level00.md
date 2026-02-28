@@ -1,4 +1,4 @@
-# Natas Level 0 -> 1
+# Natas Level 0
 
 # Primary Security Concept
 Exposed source code containing sensitive credentials
