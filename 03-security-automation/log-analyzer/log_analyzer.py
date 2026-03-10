@@ -11,17 +11,12 @@ ip_targets = defaultdict(set)
 
 BRUTE_FORCE_THRESHOLD = 3
 
-<<<<<<< HEAD
 def analyze_logs(log_file):
-=======
-with open(log_file, "r") as file:
-    for line in file:
-        match = re.search(FAILED_LOGIN_PATTERN, line)
->>>>>>> 0abae324337c00fc80ba47c9c3ba254bf814378a
 
     try:
         with open(log_file, "r") as file:
             for line in file:
+
                 failed_match = re.search(FAILED_PATTERN, line)
 
                 if failed_match:
@@ -32,7 +27,7 @@ with open(log_file, "r") as file:
                     failed_attempts[(user, ip)] += 1
                     ip_targets[ip].add(user)
 
-    except: FileNotFoundError:
+    except FileNotFoundError:
         print("Log file not found.")
         sys.exit()
 
@@ -72,10 +67,10 @@ Multiple Accounts Targeted: {len(users)}
 
 def save_report(alerts):
 
-    timestamp = datetime.now().strftime("Y-%m-%d_%H-%M-%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     report_file = f"reports/security_report_{timestamp}.txt"
 
-    with open(report_file, "W") as file:
+    with open(report_file, "w") as file:
 
         file.write("Security Log Analysis Report\n")
         file.write("=" * 40 + "\n")
@@ -103,6 +98,6 @@ def main():
     else:
         print("No suspicious activity detected.")
 
-If _name_ == "_main_":
+if __name__ == "__main__":
     main()
 

@@ -1,0 +1,14 @@
+Security Log Analysis Report
+========================================
+
+Symbol Possible Brute Force Attack
+Target User: admin
+Source IP: 192.168.1.55
+Failed Attempts: 9
+
+
+Symbol Possible Brute Force Attack
+Target User: john
+Source IP: 10.0.0.14
+Failed Attempts: 6
+
