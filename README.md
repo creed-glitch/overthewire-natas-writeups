@@ -1,6 +1,6 @@
-# Cybersecurity Engineer Portfolio
+# Cha'Tara's Cybersecurity Engineer Portfolio
 
-This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
+Welcome!! This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
 My focus is building secure systems, identifying vulnerabilities, and engineering defensive solutions.
 
 ---
@@ -11,7 +11,7 @@ My focus is building secure systems, identifying vulnerabilities, and engineerin
 |-------|-------|-------|
 | Natas Web Security Wargame | Web Security | Documented explotation of vulnerabilites across levels 0-10 of OverTheWire Natas Challenge |
 | E-Commerce Order Processing Module | Backend Security | Python backend module handling order creation, order history retrieval, and database transactions |
-| Security Automation Tools *(planned)* | Security Engineering |Python-based tools for automating vulnerability discovery and log analysis |
+| Security Automation Tools *(In Progress...)* | Security Engineering |Python-based tools for automating vulnerability discovery and log analysis |
 
 ---
 
@@ -58,13 +58,13 @@ Designed and implemented backend order processing logic using SQLite and secure 
 
 -> See: /02-backend-security/eccomerce-order-module/
 ---
-## Linux Security Engineering (In Progress)
+## Linux Security Engineering (Planned)
 System hardening, firewall configuration, SSH security, and audit logging.
 ---
 ## Networking Security Monitoring (Planned)
 Packet analysis, intrusion detection, and traffic investigation.
 ---
-## Security Automation (Planned)
+## Security Automation (In Progress)
 Python-based security scanning and reporting tools.
 ---
 ## Cloud Security (Planned)
