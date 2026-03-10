@@ -26,17 +26,14 @@ As the backend developer responsible for the order system, I implemented:
 
 ---
 
-# Responsibilities 
+## Secuirty Considerations
 
-As the backend developer responsible for the order system, I implemented:
+Several secure coding practices were used in this module:
 
-- Order creation and order tracking
-- Unique order ID generation
-- Rretrieval of user order history
-- Detailed order inspection
-- Cart-to-oreder item transfer logic
-- Database interaction using parameterized SQL queries 
-- Validation to ensure users can only view their own orders
+- Parametrized SQL queries prevent SQL injection
+- Order ownership validation prevents unauthorized access to other users' orders
+- Unique order ID generation prevents collisions
+- Controlled database connection handling reduces risk of database corruption
 
 ---
 
