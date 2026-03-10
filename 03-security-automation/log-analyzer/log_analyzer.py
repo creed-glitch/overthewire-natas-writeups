@@ -1,31 +1,102 @@
 import re
+import sys
 from collections import defaultdict
+from datetime import datetime
 
-FAILED_LOGIN_PATTERN = r"LOGIN_FAILED user=(\w+) ip=([\d\.]+)"
+FAILED_PATTERN = r"LOGIN_FAILED user=(\w+) ip=([\d\.]+)"
+SUCCESS_PATTERN = r"LOGIN_SUCCESS user=(\w+) ip=([\d\.]+)"
 
 failed_attempts = defaultdict(int)
+ip_targets = defaultdict(set)
 
-log_file = "sample_logs/auth.log"
+BRUTE_FORCE_THRESHOLD = 3
 
-with open(log_file, "r") as file:
-    for line in file:
-        match = re.search(Failed_LOGIN_PATTERN, line)
+def analyze_logs(log_file):
 
-        if match:
-            user = match.group(1)
-            ip = match.group(2)
+    try:
+        with open(log_file, "r") as file:
+            for line in file:
+                failed_match = re.search(FAILED_PATTERN, line)
 
-            failed_attempts[(user, ip)] += 1
+                if failed_match:
 
-# detection logic
-THRESHOLD = 3
+                    user = failed_match.group(1)
+                    ip = failed_match. group(2)
 
-print("\nSecurity Log Analysis Report\n")
+                    failed_attempts[(user, ip)] += 1
+                    ip_targets[ip].add(user)
 
-for (user, ip), count in failed_attempts.items():
-    if count >= THRESHOLD:
-        print(" Possible Brute Force Detected")
-        print(f"Target User: {user}")
-        print(f"Source IP: {ip}")
-        print(f"Failed Attempts: {count}\n")
+    except: FileNotFoundError:
+        print("Log file not found.")
+        sys.exit()
+
+def generate_report():
+
+    alerts = []
+
+    print("\nSecurity Log  Analysis Report")
+    print("-" * 40)
+    
+    for (user, ip), count in failed_attempts.items():
+
+        if count >= BRUTE_FORCE_THRESHOLD:
+
+            alert = f"""
+Symbol Possible Brute Force Attack
+Target User: {user}
+Source IP: {ip}
+Failed Attempts: {count}
+"""
+            alerts.append(alert)
+            print(alert)
+
+    for ip, users in ip_targets.items():
+
+        if len(users) > 2:
+
+            alert = f"""
+Symbol Suspicious Activity Detected
+Source IP: {ip}
+Multiple Accounts Targeted: {len(users)}
+"""
+            alerts.append(alert)
+            print(alert)
+
+    return alerts
+
+def save_report(alerts):
+
+    timestamp = datetime.now().strftime("Y-%m-%d_%H-%M-%S")
+    report_file = f"reports/security_report_{timestamp}.txt"
+
+    with open(report_file, "W") as file:
+
+        file.write("Security Log Analysis Report\n")
+        file.write("=" * 40 + "\n")
+
+        for alert in alerts:
+            file.write(alert)
+            file.write("\n")
+
+    print(f"\nReport saved to {report_file}")
+
+def main():
+
+    if len(sys.argv) < 2:
+        print("Usage: python log_analyzer.py <logfile>")
+        sys.exit()
+
+    log_file = sys.argv[1]
+
+    analyze_logs(log_file)
+
+    alerts = generate_report()
+
+    if alerts:
+        save_report(alerts)
+    else:
+        print("No suspicious activity detected.")
+
+If _name_ == "_main_":
+    main()
 
