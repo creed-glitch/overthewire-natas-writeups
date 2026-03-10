@@ -9,7 +9,7 @@ log_file = "sample_logs/auth.log"
 
 with open(log_file, "r") as file:
     for line in file:
-        match = re.search(Failed_LOGIN_PATTERN, line)
+        match = re.search(FAILED_LOGIN_PATTERN, line)
 
         if match:
             user = match.group(1)
