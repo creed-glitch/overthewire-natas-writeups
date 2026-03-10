@@ -1,6 +1,6 @@
-# Cybersecurity Engineer Portfolio
+# Cha'Tara's Cybersecurity Engineer Portfolio
 
-This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
+Welcome!! This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
 My focus is building secure systems, identifying vulnerabilities, and engineering defensive solutions.
 
 ---
