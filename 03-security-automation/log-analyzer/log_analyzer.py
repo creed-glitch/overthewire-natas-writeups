@@ -31,7 +31,22 @@ def analyze_logs(log_file):
         print("Log file not found.")
         sys.exit()
 
-def generate_report():
+def load_threat_intel():
+
+    malicious_ips = set()
+
+    try:
+        with open("threat_intel/malicious_ips.txt", "r") as file:
+
+            for line in file:
+                malicious_ips.add(line.strip())
+
+    except FileNotFoundError:
+        print("Threat intelligence file not found.")
+
+    return malicious_ips
+
+def generate_report(malicious_ips):
 
     alerts = []
 
@@ -41,15 +56,23 @@ def generate_report():
     for (user, ip), count in failed_attempts.items():
 
         if count >= BRUTE_FORCE_THRESHOLD:
+            
+            reputation = "Uknown"
+
+            if ip in malicious_ips:
+                reputation = "KNOWN MALICIOUS IP"
 
             alert = f"""
 Symbol Possible Brute Force Attack
 Target User: {user}
 Source IP: {ip}
 Failed Attempts: {count}
+Threat Intelligence: {reputation}
 """
             alerts.append(alert)
             print(alert)
+    
+    return alerts
 
     for ip, users in ip_targets.items():
 
@@ -81,6 +104,21 @@ def save_report(alerts):
 
     print(f"\nReport saved to {report_file}")
 
+def load_threat_intel():
+
+    malicious_ips = set()
+
+    try:
+        with open("threat_intel/malicious_ips.txt", "r") as file:
+
+            for line in file:
+                malicious_ips.add(line.strip())
+
+    except FileNotFoundError:
+        print("Threat intelligence file not found.")
+
+    return malicious_ips
+
 def main():
 
     if len(sys.argv) < 2:
@@ -91,7 +129,7 @@ def main():
 
     analyze_logs(log_file)
 
-    alerts = generate_report()
+    alerts = generate_report(malicious_ips)
 
     if alerts:
         save_report(alerts)

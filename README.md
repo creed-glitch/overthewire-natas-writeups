@@ -1,6 +1,12 @@
-# Cha'Tara's Cybersecurity Engineer Portfolio
+# Cybersecurity Engineer Portfolio
 
-Welcome!! This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
+Author: Cha'Tara Reed
+
+## About Me
+
+Welcome!! I am a cybersecurity student focused on developing the technical skills required to become a cybersecurity engineer. My interests include application security, security automation, and secure backend system design.
+
+This repository documents my hands-on cybersecuurity engineering projects, labs, and security research.
 My focus is building secure systems, identifying vulnerabilities, and engineering defensive solutions.
 
 ---
@@ -41,14 +47,14 @@ Application Architecture
 
 ---
 
+## Career Goal
+
+My Goal is a to beomce a **Cybersecurity Engineer**, developing tools and systems that help organizations detect and defend agasint real-world security threats. 
+
+---
 ## Web Application Security
 ### OverTheWire Natas (Levels 0-10)
-Hands-on exploitation of real-world web vulnerabilities including:
-- Source code exposure
-- Directory traversal
-- Cookie manipulation
-- Command injection
-- Input filtering bypass
+Completed levels by exploiting the different vulnerabilites that were left available to find. 
 
 -> See: /01-web-security/overthewire-natas/
 ---
@@ -65,7 +71,10 @@ System hardening, firewall configuration, SSH security, and audit logging.
 Packet analysis, intrusion detection, and traffic investigation.
 ---
 ## Security Automation (In Progress)
+### Python Log Analyzer 
 Python-based security scanning and reporting tools.
+
+-> See: /03-security-automation/log-analyzer/
 ---
 ## Cloud Security (Planned)
 Secure AWS infrastructure and IAM policy design.
