@@ -63,7 +63,7 @@ def generate_report(malicious_ips):
                 reputation = "KNOWN MALICIOUS IP"
 
             alert = f"""
-Symbol Possible Brute Force Attack
+⚠ Possible Brute Force Attack
 Target User: {user}
 Source IP: {ip}
 Failed Attempts: {count}
@@ -79,7 +79,7 @@ Threat Intelligence: {reputation}
         if len(users) > 2:
 
             alert = f"""
-Symbol Suspicious Activity Detected
+⚠ Suspicious Activity Detected
 Source IP: {ip}
 Multiple Accounts Targeted: {len(users)}
 """
