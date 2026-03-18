@@ -30,8 +30,8 @@ def analyze_logs(log_file):
                     ip_targets[ip].add(user)
 
                 if success_match:
-                    user = succes_match.group(1)
-                    ip = sucess_match.group(2)
+                    user = success_match.group(1)
+                    ip = success_match.group(2)
 
                     if user == "admin":
                         admin_success_ips.add(ip)
@@ -39,21 +39,6 @@ def analyze_logs(log_file):
     except FileNotFoundError:
         print("Log file not found.")
         sys.exit()
-
-def load_threat_intel():
-
-    malicious_ips = set()
-
-    try:
-        with open("threat_intel/malicious_ips.txt", "r") as file:
-
-            for line in file:
-                malicious_ips.add(line.strip())
-
-    except FileNotFoundError:
-        print("Threat intelligence file not found.")
-
-    return malicious_ips
 
 def generate_report(malicious_ips):
 
@@ -152,6 +137,8 @@ def main():
     log_file = sys.argv[1]
 
     analyze_logs(log_file)
+
+    malicious_ips = load_threat_intel()
 
     alerts = generate_report(malicious_ips)
 
