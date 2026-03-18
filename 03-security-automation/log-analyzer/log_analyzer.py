@@ -8,6 +8,7 @@ SUCCESS_PATTERN = r"LOGIN_SUCCESS user=(\w+) ip=([\d\.]+)"
 
 failed_attempts = defaultdict(int)
 ip_targets = defaultdict(set)
+admin_success_ips =  set()
 
 BRUTE_FORCE_THRESHOLD = 3
 
@@ -15,17 +16,25 @@ def analyze_logs(log_file):
 
     try:
         with open(log_file, "r") as file:
+
             for line in file:
 
                 failed_match = re.search(FAILED_PATTERN, line)
+                success_match = re.search(SUCCESS_PATTERN, line)
 
                 if failed_match:
-
                     user = failed_match.group(1)
                     ip = failed_match. group(2)
 
                     failed_attempts[(user, ip)] += 1
                     ip_targets[ip].add(user)
+
+                if success_match:
+                    user = succes_match.group(1)
+                    ip = sucess_match.group(2)
+
+                    if user == "admin":
+                        admin_success_ips.add(ip)
 
     except FileNotFoundError:
         print("Log file not found.")
@@ -53,6 +62,7 @@ def generate_report(malicious_ips):
     print("\nSecurity Log  Analysis Report")
     print("-" * 40)
     
+    # --- Brute Force ---
     for (user, ip), count in failed_attempts.items():
 
         if count >= BRUTE_FORCE_THRESHOLD:
@@ -72,8 +82,7 @@ Threat Intelligence: {reputation}
             alerts.append(alert)
             print(alert)
     
-    return alerts
-
+    # --- Multi-user attack ---
     for ip, users in ip_targets.items():
 
         if len(users) > 2:
@@ -85,6 +94,21 @@ Multiple Accounts Targeted: {len(users)}
 """
             alerts.append(alert)
             print(alert)
+
+    # --- Admin anomaly detection ---
+    for ip in admin_success_ips:
+
+        if ip not in malicious_ips:
+            continue # skip normal IPs if you want strict detection
+
+        alert = f"""
+Symbol Suspicious Admin Login Detected
+User: admin
+Source IP: {ip}
+Reason: Login from known malicious IP
+"""
+        alerts.append(alert)
+        print(alert)
 
     return alerts
 
