@@ -87,7 +87,7 @@ Multiple Accounts Targeted: {len(users)}
             continue # skip normal IPs if you want strict detection
 
         alert = f"""
-Symbol Suspicious Admin Login Detected
+⚠ Suspicious Admin Login Detected
 User: admin
 Source IP: {ip}
 Reason: Login from known malicious IP
